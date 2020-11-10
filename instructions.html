@@ -1,20 +1,38 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
- <style>
-   .topnav-right {
+<title>INSTRUCTIONS</title>
+<style>
+{
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  
+}
+.column {
+  flex: 10%;
+  padding: 120px;
+}
+#img1 {
+  border-radius: 10px;
+  border: 5px solid #000000;
+}
+
+ .image-margin   {width:100px; margin:0px 50px 0px 450px;}
+
+ .topnav-right {
     float:right;
    }
- </style>
-
-
+</style>
 
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #9966ff">
   <a class="navbar-brand" href="#" style="color: white"><b>Three Body Problem</b></a>
@@ -39,20 +57,38 @@
   </div>
 </nav>
 
+</head>
+<body>
+<body style="background-color:bisque;">
+<h1 style="font:Apple Chancery, cursive;color:blue;font-size:65;font-weight:700;font-style:italic;text-align:center;"><u>INSTRUCTIONS</u></h1>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;"><b>Instructions for operating the simulator:</b> Note that you need to know, and input the radii, masses, initial positions, and initial velocities of the three bodies to start the simulator.</p>
 
-  </head>
-  <body>
-   
-  <div>
-    
+<img id="img1" src=".\sources\I1.JPG" alt="Run Button" width="500" height="100" style="float:right" HSPACE="20">
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;"><b>Step 1:</b> Under the home page, click on "Run" as shown in the figure.</p>
 
 
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">A dialogue box will appear at the top of the web browser tab.</p>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;"><b>Step 2:</b> Enter the radii of the three particles in the order: radius of particle 1(SPACE)radius of particle 2(SPACE)radius of particle 3, and click OK.</p>
+<img id="img1" src=".\sources\I2.JPG" alt="Dialogue Box for Radii" width="400" height="150" style="float:right" HSPACE="20">
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">An example in which all the three radii are 1 unit each, is shown in the following figure.</p>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">Now the dialogue box for masses will come up. Enter the masses of the three particles in the same order as in the case of radii i.e. mass of particle 1(SPACE)mass of particle 2(SPACE)mass of particle 3 and click OK.</p>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </div>
-  </body>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">Next, the dialogue box will ask for the initial position of the particle 1 in cartesian format (ijk)
+
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;"><b>Step 3:</b> Enter the coordinates of the position of particle 1 in the order: X-Coordinate(SPACE)Y-Coordinate(SPACE)Z-Coordinate, and click OK. An example in which the particle 1 recides at the origin of the coordinate system, is shown in the following figure.</p>
+<img id="img1" src=".\sources\I3.JPG" alt="Dialogue Box for Position" width="400" height="150" style="float:right" HSPACE="20">
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">The dialogue boxes for particles 2 and 3 will follow. Repeat the same procedure for particles 2 and 3 too.</p>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">After specifying the initial positions of the three particles, the dialogue box will ask for the initial velocity of particle 1, in the form of cartesian components.</p>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;"><b>Step 4:</b> Enter the velocity components of particle 1 in the order: X-Component(SPACE)Y-Component(SPACE)Z-Component, and click OK.</p>
+<img id="img1" src=".\sources\I4.JPG" alt="Dialogue Box for Velocity" width="400" height="150" style="float:right" HSPACE="20">
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">An example in which the three velocity components corresponding to particle 1, in order, are 1,2 and 3 units respectively, is shown in the following figure.</p>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">The dialogue boxes for the velocity components of particles 2 and 3 will follow. Repeat the same procedure for particles 2 and 3 too.</p>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">The simulation will load and open. The three particles along with a slider bar and two buttons will appear. Press the "play" button to start the animation. Press restart if you want to see the animation again, from the beginning. Once the animation starts running, you can also pause the animation.</p>
+<img id="img1" src=".\sources\I5.JPG" alt="Final GUI" width="400" height="150" style="float:right" HSPACE="20">
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">Use the slider bar to adjust (increase/decrease) the animation speed. The animation will zoom in or out automatically, to give you the best view of the moving particles.</p>
+
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;"><b>Note:</b>The values provided as input to the simulator should be separated by spaces in between only, as explained in the cases of radii and mass. DO NOT add leading or trailing spaces or characters, as that will mislead the input, and might cause errors. In case of such an error, you can always hit the run button to start afresh.</p>
+<p style="font:georgia;font-size:65;font-weight:700;text-align:center;">THANK YOU</p>
+</div>
+</body>
 </html>
