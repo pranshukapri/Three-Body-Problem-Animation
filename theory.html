@@ -1,22 +1,40 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<html><head>
+<title>three body problem</title>
+
+<!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
- <style>
-   .topnav-right {
+<style>
+{
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  
+}
+.column {
+  flex: 10%;
+  padding: 120px;
+}
+#img1 {
+  border-radius: 10px;
+  border: 5px solid #000000;
+}
+
+ .image-margin   {width:100px; margin:0px 50px 0px 450px;}
+
+.topnav-right {
     float:right;
    }
- </style>
 
+</style>
 
-
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #9966ff">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #9966ff">
   <a class="navbar-brand" href="#" style="color: white"><b>Three Body Problem</b></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -39,10 +57,11 @@
   </div>
 </nav>
 
+</head>
 
-  </head>
-  <body>
-   
+<body style="background-color:bisque;">
+
+  
   <div>
     
 
@@ -54,5 +73,127 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </div>
-  </body>
+
+
+<h1 style="font:Apple Chancery, cursive;color:red;font-size:70;font-weight:800;font-style:italic;text-align:center;"><u>THREE BODY PROBLEM</u></h1>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">In physics and classical mechanics, <b>the three-body problem</b> is the problem of taking the initial positions and velocities (or momenta) of three point masses and solving for their subsequent motion according to Newton's laws of motion and Newton's law of universal gravitation.The three-body problem is a special case of the <b>n-body problem</b>. Unlike two-body problems, no general closed-form solution exists,as the resulting dynamical system is chaotic for most initial conditions, and numerical methods are generally required.
+Historically, the first specific three-body problem to receive extended study was the one involving the Moon, the Earth, and the Sun.In an extended modern sense, a three-body problem is any problem in classical mechanics or quantum mechanics that models the motion of three particles.</p>
+
+<h3 style="font:Apple Chancery, cursive;color:darkblue;font-size:35;font-weight:600;font-style:italic;"><u>n-Body Problem</u></h3>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">The <b>n-Body Problem</b> describes how n objects will move under one of the physical forces, such as gravity. These problems have a global analytical solution in the form of a convergent power series. However, these series converge so slowly that they are useless for practical purposes; therefore, it is currently necessary to approximate solutions by numerical analysis in the form of numerical integration or classical trigonometric series approximations. Atomic systems, e.g. atoms, ions, and molecules, can be treated in terms of the quantum n-body problem. Among classical physical systems, the n-body problem usually refers to a galaxy or to a cluster of galaxies and planetary systems, such as stars, planets, and their satellites. Some applications are conveniently treated by perturbation theory, in which the system is considered as a two-body problem plus additional forces causing deviations from a hypothetical unperturbed two-body trajectory.</p>
+
+<div class="row">
+  <div class="column">
+    <img id="img1" src=".\sources\Three-body_Problem_Animation_with_COM.gif" alt="3-body trajectory" width="500" height="400">
+  </div>
+  <div class="column">
+    <img id="img1" src=".\sources\image-asset.gif" alt="3-body trajectory" width="500" height="400">
+  </div>
+</div>
+
+<h3 style="font:Apple Chancery, cursive;color:darkblue;font-size:35;font-weight:600;font-style:italic;"><u>Mathematical Formulation</u></h3>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">For the Three Bodies, we have Masses as Mi i.e M1,M2,M3 , position vectors as ri=(xi,yi,zi) and initial velocity vectors as vi=(vx,vy,vz).
+<br>We use <b>Newton’s Law of Gravitation</b> for the calculation of the mutual gravitational forces. Let the bodies be named as sun1, sun2 and sun3.<br><br>
+The distance between sun 1 and sun 2 can be expressed as<br>
+r12 = sun1.pos – sun2.pos<br>
+<b>r12 = r1-r2</b><br><br>
+Force on sun1 due to sun2 can be expressed as<br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\fn_jvn&space;F12&space;=&space;-F21&space;=\frac{-(G*M1*M2)\overrightarrow{r12}}{\left&space;|&space;r12&space;\right&space;|^{3}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;F12&space;=&space;-F21&space;=\frac{-(G*M1*M2)\overrightarrow{r12}}{\left&space;|&space;r12&space;\right&space;|^{3}}" title="F12 = -F21 =\frac{-(G*M1*M2)\overrightarrow{r12}}{\left | r12 \right |^{3}}" /></a>
+<br>where M1 and M2 are the respective masses of sun1 and sun2 and G is the gravitation constant. <br><br>
+This is how all the individual forces are calculated, and the directions are given. The cumulative force on one body due to the other three bodies is the vector sum of the two individual gravitational forces (for example, between sun1, sun2 and sun1, sun3).
+<br><b>F1 = F12 + F13 </b><br><br>
+By <b>Newton's laws of Motion</b>, we have<br>
+Acceleration of sun1: a1 = F1/M1<br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\fn_jvn&space;\ddot{r1}=&space;-\frac{G*M2*(\overrightarrow{r1}-\overrightarrow{r2})}{\left&space;|&space;r1-r2\right&space;|^{3}}-\frac{G*M3*(\overrightarrow{r1}-\overrightarrow{r3})}{\left&space;|&space;r1-r3\right&space;|^{3}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;\ddot{r1}=&space;-\frac{G*M2*(\overrightarrow{r1}-\overrightarrow{r2})}{\left&space;|&space;r1-r2\right&space;|^{3}}-\frac{G*M3*(\overrightarrow{r1}-\overrightarrow{r3})}{\left&space;|&space;r1-r3\right&space;|^{3}}" title="\ddot{r1}= -\frac{G*M2*(\overrightarrow{r1}-\overrightarrow{r2})}{\left | r1-r2\right |^{3}}-\frac{G*M3*(\overrightarrow{r1}-\overrightarrow{r3})}{\left | r1-r3\right |^{3}}" /></a>
+<br><br>Velocity change in time dt: <b>V1new = V1old + a1*dt </b><br>
+Position change in time dt: <b>sun1.posnew = sun1.posold + V1new*dt</b>
+<br><br>Therefore, Three Body Problem is described by set of <b>9 second-order</b> differential equations for accelerations or we can say a set of  <b>18 first-order</b> differential equations, one for each component of the positions ri and momenta pi.
+<br><br>When there is a collision occurring, elastic collisions are considered. <br>
+Thus, By Conservation of Momentum
+<br><b>M1*V1old + M2*V2old = M1*V1new + M2*V2new</b>
+<br><br>and By Conservation of Energy <br>
+<b>0.5*M1*V1old*V1old + 0.5*M2*V2old*V2old = 0.5*M1*V1new*V1new + 0.5*M2*V2new*V2new</b>
+<br><br>These equations, on solving, give us the values of final velocities of the two particles colliding, after elastic collision.</p>
+
+<h3 style="font:Apple Chancery, cursive;color:darkblue;font-size:35;font-weight:600;font-style:italic;"><u>Solutions</u></h3>
+<h4 style="font:Apple Chancery, cursive;color:darkgreen;font-size:30;font-weight:600;font-style:italic;"><u>General Solutions</u></h4>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">There is <b>no general analytical solution</b> to the three-body problem given by simple algebraic expressions and integrals.[1] Moreover, the motion of three bodies is generally <b>non-repeating</b>, except in special cases.
+<br>In 1912, the Finnish mathematician <b>Karl Fritiof Sundman</b> proved that there exists a series solution in <b>powers of t^(1/3)</b> for the 3-body problem.This series converges for all real t, except for initial conditions corresponding to <b>zero angular momentum</b>.
+<br><br>The <b>radius of convergence</b> for this series is determined by the distance to the <b>nearest singularity</b>. Therefore, it is necessary to study the possible singularities of the 3-body problems and the only singularities in the 3-body problem are <b>binary collisions and triple collisions</b>.
+<br><br>Collisions, whether binary or triple, are somewhat improbable, since they correspond to a set of initial conditions of measure zero. However, there is no criterion known to be put on the initial state in order to avoid collisions for the corresponding solution. So Sundman's strategy consisted of the following steps:
+
+<br><br> 1. Using an appropriate change of variables to continue analyzing the solution beyond the binary collision, in a process known as <b>regularization</b>.
+<br> 2. Proving that triple collisions only occur when the angular momentum L vanishes. By restricting the initial data to L ≠ 0, he removed all real singularities from the transformed equations for the 3-body problem.
+<br> 3. Showing that if L ≠ 0, then not only can there be no triple collision, but the system is strictly bounded away from a triple collision. This implies, by using Cauchy's existence theorem for differential equations, that there are no complex singularities in a strip (depending on the value of L) in the complex plane centered around the real axis.
+<br> 4. Find a conformal transformation that maps this strip into the unit disc. For example, if s = t1/3 (the new variable after the regularization) and if |ln s| ≤ β,then this map is given by
+<br><a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\fn_cs&space;\large&space;{\displaystyle&space;\sigma&space;={\frac&space;{e^{\frac&space;{\pi&space;s}{2\beta&space;}}-1}{e^{\frac&space;{\pi&space;s}{2\beta&space;}}&plus;1}}.}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_cs&space;\large&space;{\displaystyle&space;\sigma&space;={\frac&space;{e^{\frac&space;{\pi&space;s}{2\beta&space;}}-1}{e^{\frac&space;{\pi&space;s}{2\beta&space;}}&plus;1}}.}" title="\large {\displaystyle \sigma ={\frac {e^{\frac {\pi s}{2\beta }}-1}{e^{\frac {\pi s}{2\beta }}+1}}.}" /></a>
+<br> This finishes the proof of Sundman's theorem.
+
+<br><br>Unfortunately, the corresponding series converges very slowly. That is, obtaining a value of meaningful precision requires so many terms that this solution is of little practical use.
+</p>
+
+<h4 style="font:Apple Chancery, cursive;color:darkgreen;font-size:30;font-weight:600;font-style:italic;"><u>Specific Solutions</u></h4>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">Specific solutions could be sorted into just three families: the <b>Lagrange-Euler family</b> discovered by Joseph-Louis Lagrange and Leonhard Euler, the <b>Broucke-Hénon family</b> discovered by  Roger Broucke and Michel Hénon, and <b>the figure-eight family</b> discovered by Cristopher Moore.
+<br><br>The figure-eight family is so called because it describes three objects chasing one another in a figure eight shape. The Lagrange-Euler solutions are simpler, with the equally spaced bodies going around in a circle like horses on a merry-go-round. The Broucke-Hénon solutions are the most complex: Two objects dash back and forth on the inside, while the third object orbits around the outside.
+</p>
+
+<h5 style="font:Apple Chancery, cursive;color:purple;font-size:25;font-weight:600;font-style:italic;"><u>1. Euler Solution</u></h5>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">
+In 1767, Leonhard Euler found three families of periodic solutions in which the three masses are <b>collinear</b> at each instant. For more details, see <a href="https://en.wikipedia.org/wiki/Euler%27s_three-body_problem">Euler's three-body problem</a>.</p>
+<p class="image-margin"> <img id="img1" src=".\sources\eu1.jpg" alt="euler solution" width="500" height="250"></p>
+
+<h5 style="font:Apple Chancery, cursive;color:purple;font-size:25;font-weight:600;font-style:italic;"><u>2. Langrage Solution</u></h5>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">
+In 1772, Lagrange found a family of solutions in which the three masses form an <b>equilateral triangle</b> at each instant. Together with Euler's collinear solutions, these solutions form the central configurations for the three-body problem. These solutions are valid for any mass ratios, and the masses move on <b>Keplerian ellipses</b>. These four families are the only known solutions for which there are explicit analytic formulae. In the special case of the circular restricted three-body problem, these solutions, viewed in a frame rotating with the primaries, become points which are referred to as L1, L2, L3, L4, and L5, and called <a href="https://en.wikipedia.org/wiki/Lagrangian_point">Lagrangian points</a>, with L4 and L5 being symmetric instances of Lagrange's solution.
+</p><br>
+
+<div class="row">
+  <div class="column">
+    <img id="img1" src=".\sources\l1.png" alt="Langrange Solution" width="500" height="400">
+  </div>
+  <div class="column">
+    <img id="img1" src=".\sources\lang2.gif" alt="Langrange Solution" width="500" height="400">
+  </div>
+</div>
+
+<h5 style="font:Apple Chancery, cursive;color:purple;font-size:25;font-weight:600;font-style:italic;"><u>3. Broucke-Hénon Solution</u></h5>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">
+In the 1970s, Michel Hénon and Roger A. Broucke each found a set of solutions that form part of the same family of solutions: the Broucke–Henon–Hadjidemetriou family. In this family the three objects all have the <b>same mass</b> and can exhibit both retrograde and direct forms. In some of Broucke's solutions two of the bodies follow the <b>same path</b>.
+</p>
+<p class="image-margin"> <img id="img1" src=".\sources\bruoke1.gif" alt=" Broucke-Hénon solution" width="500" height="250"></p>
+
+<h5 style="font:Apple Chancery, cursive;color:purple;font-size:25;font-weight:600;font-style:italic;"><u>4. Figure Eight Solution</u></h5>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">
+In 1993, a <b>zero angular momentum</b> solution with three <b>equal masses</b> moving around a figure-eight shape was discovered numerically by physicist Cris Moore at the Santa Fe Institute.The solution has been shown numerically to be <b>stable for small perturbations of the mass and orbital parameters</b>, which raises the intriguing possibility that such orbits could be observed in the physical universe. However, it has been argued that this occurrence is unlikely since the domain of stability is small. 
+</p>
+<p class="image-margin"> <img id="img1" src=".\sources\Eight1.gif" alt=" Figure 8 solution" width="500" height="250"></p>
+
+<h5 style="font:Apple Chancery, cursive;color:purple;font-size:25;font-weight:600;font-style:italic;"><u>5. 13 New Family of Solutions</u></h5>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">
+In 2013, physicists Milovan Šuvakov and Veljko Dmitrašinović at the Institute of Physics in Belgrade discovered <a href="https://www.sciencemag.org/news/2013/03/physicists-discover-whopping-13-new-solutions-three-body-problem">13 new families of solutions</a> for the <b>equal-mass zero-angular-momentum</b> three-body problem.Faced with so many new solutions, the Belgrade physicists invented a new classification system. They used an abstract space called a <b>"shape-sphere"</b> which describes the shape of the orbits in terms of the <b>relative distances between the objects</b>. Three spots around the sphere's equator mark where two of the particles would collide, and a line drawn over the ball, which must avoid those spots, maps how near the objects get to each other.
+</p>
+<p class="image-margin"> <img id="img1" src=".\sources\sn-threebody.jpg" alt=" 13 new families solution" width="500" height="400"></p>
+
+<h3 style="font:Apple Chancery, cursive;color:darkblue;font-size:35;font-weight:600;font-style:italic;"><u>Other Problems involving Three Bodies</u></h3>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">
+The term <b>'three-body problem'</b> is sometimes used in the more general sense to refer to any physical problem involving the <b>interaction of three bodies</b>.
+
+<br><br>A quantum mechanical analogue of the gravitational three-body problem in classical mechanics is the helium atom, in which a <b>helium nucleus</b> and two electrons interact according to <b>the inverse-square Coulomb interaction</b>. Like the gravitational three-body problem, the helium atom cannot be solved exactly.
+
+<br><br>In both classical and quantum mechanics, however, there exist nontrivial interaction laws besides the inverse-square force which do lead to exact analytic three-body solutions. One such model consists of a combination of <b>harmonic attraction and a repulsive inverse-cube force</b>. This model is considered nontrivial since it is associated with a set of <b>nonlinear differential equations containing singularities</b> (compared with, e.g., harmonic interactions alone, which lead to an easily solved system of linear differential equations). In these two respects it is analogous to (insoluble) models having Coulomb interactions, and as a result has been suggested as a tool for intuitively understanding physical systems like the helium atom.
+
+<br><br>The gravitational three-body problem has also been studied using <b>general relativity</b>. Physically, a relativistic treatment becomes necessary in systems with very strong gravitational fields, such as near <b>the event horizon of a black hole</b>. However, the relativistic problem is considerably more difficult than in Newtonian mechanics, and sophisticated numerical techniques are required. Even the full two-body problem (i.e. for arbitrary ratio of masses) does not have a rigorous analytic solution in general relativity.
+</p>
+
+<h3 style="font:Apple Chancery, cursive;color:darkblue;font-size:35;font-weight:600;font-style:italic;"><u>References</u></h3>
+<p style="font:georgia;font-size:20;font-weight:400;text-align:justify;">
+<a href="https://en.wikipedia.org/wiki/Three-body_problem">1.<t>https://en.wikipedia.org/wiki/Three-body_problem</a>
+<br><br><a href="http://www.phys.lsu.edu/faculty/gonzalez/Teaching/Phys7221/ThreeBodyProblem.pdf">2.<t>The Three-Body Problem</a>
+<br><br><a href="https://www.sciencemag.org/news/2013/03/physicists-discover-whopping-13-new-solutions-three-body-problem">3.<t>13 New Solutions</a>
+<br><br><a href="https://www.pks.mpg.de/nonlinear-dynamics-and-time-series-analysis/research/">4.<t>Non linear Dynamics</a>
+<br><br><a href="https://www.ias.ac.in/article/fulltext/reso/024/01/0087-0114">5.<t>Classical Three Body Problem</a>
+</p>
+
+
+</body>
 </html>
