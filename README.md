@@ -1,5 +1,7 @@
 # Three-Body-Problem-Animation
 
+**Index File is the Homepage.
+
 This Project aims on showing a visual representation of how a 3 body problem only under gravitational forces would look in real life.
 
 Input Parameters:
