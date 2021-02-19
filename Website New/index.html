@@ -60,15 +60,6 @@
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Welcome!</h1>
       <p> &#9763; <span class="typed" data-typed-items="The Three Body Problem"></span></p>
-      <!--
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-      -->
     </div>
   </section><!-- End Home -->
 
@@ -134,6 +125,7 @@
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-n_body">n-Body Problem</li>
               <li data-filter=".filter-mat_for">Mathematical Formulation</li>
               <li data-filter=".filter-gen_sol">General Solutions</li>
@@ -144,129 +136,69 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
+          <div class="column portfolio-item filter-n_body">
+            <div>
+              <h3 style="color: #0563bb;">&#8608; n-Body Problem</h3>
+              <br>
+              The n-Body Problem describes how n objects will move under one of the physical forces, such as gravity. These problems have a global analytical solution in the form of a convergent power series. However, these series converge so slowly that they are useless for practical purposes; therefore, it is currently necessary to approximate solutions by numerical analysis in the form of numerical integration or classical trigonometric series approximations. Atomic systems, e.g. atoms, ions, and molecules, can be treated in terms of the quantum n-body problem. Among classical physical systems, the n-body problem usually refers to a galaxy or to a cluster of galaxies and planetary systems, such as stars, planets, and their satellites. Some applications are conveniently treated by perturbation theory, in which the system is considered as a two-body problem plus additional forces causing deviations from a hypothetical unperturbed two-body trajectory.
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
+          <div class="column portfolio-item filter-mat_for">
+            <div>
+              <h3 style="color: #0563bb;">&#8608; Mathematical Formulation</h3>
+              <br>
+                For the Three Bodies, we have Masses as Mi i.e M1,M2,M3 , position vectors as ri=(xi,yi,zi) and initial velocity vectors as vi=(vx,vy,vz).
+                <br>We use <b>Newton’s Law of Gravitation</b> for the calculation of the mutual gravitational forces. Let the bodies be named as sun1, sun2 and sun3.<br><br>
+                The distance between sun 1 and sun 2 can be expressed as<br>
+                r12 = sun1.pos – sun2.pos<br>
+                <b>r12 = r1-r2</b><br><br>
+                Force on sun1 due to sun2 can be expressed as<br>
+                <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\fn_jvn&space;F12&space;=&space;-F21&space;=\frac{-(G*M1*M2)\overrightarrow{r12}}{\left&space;|&space;r12&space;\right&space;|^{3}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;F12&space;=&space;-F21&space;=\frac{-(G*M1*M2)\overrightarrow{r12}}{\left&space;|&space;r12&space;\right&space;|^{3}}" title="F12 = -F21 =\frac{-(G*M1*M2)\overrightarrow{r12}}{\left | r12 \right |^{3}}" /></a>
+                <br>where M1 and M2 are the respective masses of sun1 and sun2 and G is the gravitation constant. <br><br>
+                This is how all the individual forces are calculated, and the directions are given. The cumulative force on one body due to the other three bodies is the vector sum of the two individual gravitational forces (for example, between sun1, sun2 and sun1, sun3).
+                <br><b>F1 = F12 + F13 </b><br><br>
+                By <b>Newton's laws of Motion</b>, we have<br>
+                Acceleration of sun1: a1 = F1/M1<br>
+                <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\fn_jvn&space;\ddot{r1}=&space;-\frac{G*M2*(\overrightarrow{r1}-\overrightarrow{r2})}{\left&space;|&space;r1-r2\right&space;|^{3}}-\frac{G*M3*(\overrightarrow{r1}-\overrightarrow{r3})}{\left&space;|&space;r1-r3\right&space;|^{3}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_jvn&space;\ddot{r1}=&space;-\frac{G*M2*(\overrightarrow{r1}-\overrightarrow{r2})}{\left&space;|&space;r1-r2\right&space;|^{3}}-\frac{G*M3*(\overrightarrow{r1}-\overrightarrow{r3})}{\left&space;|&space;r1-r3\right&space;|^{3}}" title="\ddot{r1}= -\frac{G*M2*(\overrightarrow{r1}-\overrightarrow{r2})}{\left | r1-r2\right |^{3}}-\frac{G*M3*(\overrightarrow{r1}-\overrightarrow{r3})}{\left | r1-r3\right |^{3}}" /></a>
+                <br><br>Velocity change in time dt: <b>V1new = V1old + a1*dt </b><br>
+                Position change in time dt: <b>sun1.posnew = sun1.posold + V1new*dt</b>
+                <br><br>Therefore, Three Body Problem is described by set of <b>9 second-order</b> differential equations for accelerations or we can say a set of  <b>18 first-order</b> differential equations, one for each component of the positions ri and momenta pi.
+                <br><br>When there is a collision occurring, elastic collisions are considered. <br>
+                Thus, By Conservation of Momentum
+                <br><b>M1*V1old + M2*V2old = M1*V1new + M2*V2new</b>
+                <br><br>and By Conservation of Energy <br>
+                <b>0.5*M1*V1old*V1old + 0.5*M2*V2old*V2old = 0.5*M1*V1new*V1new + 0.5*M2*V2new*V2new</b>
+                <br><br>These equations, on solving, give us the values of final velocities of the two particles colliding, after elastic collision.
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
+          <div class="column portfolio-item filter-gen_sol">
+            <div>
+              <h3 style="color: #0563bb;">&#8608; General Solutions</h3>
+              <br>
+                There is <b>no general analytical solution</b> to the three-body problem given by simple algebraic expressions and integrals.[1] Moreover, the motion of three bodies is generally <b>non-repeating</b>, except in special cases.
+                <br>In 1912, the Finnish mathematician <b>Karl Fritiof Sundman</b> proved that there exists a series solution in <b>powers of t^(1/3)</b> for the 3-body problem.This series converges for all real t, except for initial conditions corresponding to <b>zero angular momentum</b>.
+                <br><br>The <b>radius of convergence</b> for this series is determined by the distance to the <b>nearest singularity</b>. Therefore, it is necessary to study the possible singularities of the 3-body problems and the only singularities in the 3-body problem are <b>binary collisions and triple collisions</b>.
+                <br><br>Collisions, whether binary or triple, are somewhat improbable, since they correspond to a set of initial conditions of measure zero. However, there is no criterion known to be put on the initial state in order to avoid collisions for the corresponding solution. So Sundman's strategy consisted of the following steps:
+                
+                <br><br> 1. Using an appropriate change of variables to continue analyzing the solution beyond the binary collision, in a process known as <b>regularization</b>.
+                <br> 2. Proving that triple collisions only occur when the angular momentum L vanishes. By restricting the initial data to L ≠ 0, he removed all real singularities from the transformed equations for the 3-body problem.
+                <br> 3. Showing that if L ≠ 0, then not only can there be no triple collision, but the system is strictly bounded away from a triple collision. This implies, by using Cauchy's existence theorem for differential equations, that there are no complex singularities in a strip (depending on the value of L) in the complex plane centered around the real axis.
+                <br> 4. Find a conformal transformation that maps this strip into the unit disc. For example, if s = t1/3 (the new variable after the regularization) and if |ln s| ≤ β,then this map is given by
+                <br><a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{120}&space;\fn_cs&space;\large&space;{\displaystyle&space;\sigma&space;={\frac&space;{e^{\frac&space;{\pi&space;s}{2\beta&space;}}-1}{e^{\frac&space;{\pi&space;s}{2\beta&space;}}&plus;1}}.}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{120}&space;\fn_cs&space;\large&space;{\displaystyle&space;\sigma&space;={\frac&space;{e^{\frac&space;{\pi&space;s}{2\beta&space;}}-1}{e^{\frac&space;{\pi&space;s}{2\beta&space;}}&plus;1}}.}" title="\large {\displaystyle \sigma ={\frac {e^{\frac {\pi s}{2\beta }}-1}{e^{\frac {\pi s}{2\beta }}+1}}.}" /></a>
+                <br> This finishes the proof of Sundman's theorem.
+                
+                <br><br>Unfortunately, the corresponding series converges very slowly. That is, obtaining a value of meaningful precision requires so many terms that this solution is of little practical use.
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
+          <div class="column portfolio-item filter-spe_sol">
+            <div>
+              <h3 style="color: #0563bb;">&#8608; Specific Solutions</h3>
+              <br>
+                Specific solutions could be sorted into just three families: the <b>Lagrange-Euler family</b> discovered by Joseph-Louis Lagrange and Leonhard Euler, the <b>Broucke-Hénon family</b> discovered by  Roger Broucke and Michel Hénon, and <b>the figure-eight family</b> discovered by Cristopher Moore.
+                <br><br>The figure-eight family is so called because it describes three objects chasing one another in a figure eight shape. The Lagrange-Euler solutions are simpler, with the equally spaced bodies going around in a circle like horses on a merry-go-round. The Broucke-Hénon solutions are the most complex: Two objects dash back and forth on the inside, while the third object orbits around the outside.
             </div>
           </div>
 
@@ -281,7 +213,7 @@
 
         <div class="section-title">
           <h2>Instructions</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>We are here to help you get familiar with the interface! Click on the Steps to expand with picture examples.</p>
         </div>
 
         <div class="row">
@@ -292,10 +224,11 @@
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                   <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
                 </svg>
-                <i class="bx bxl-dribbble"></i>
+                <i style="font-family: cursive;">1</i>
               </div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4>Step 1</h4>
+              <p style="text-align: center;">In the Animation Page, click on "Run" button located just beside the Trinket Icon.</p>
+              <p style="text-align: center;">The main Animation window will appear now.</p>
             </div>
           </div>
 
@@ -305,10 +238,11 @@
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                   <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
                 </svg>
-                <i class="bx bx-file"></i>
+                <i style="font-family: cursive;">2</i>
               </div>
-              <h4><a href="">Sed Perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h4>Step 2</h4>
+              <p style="text-align: center;">The "Play/Pause" button will start or stop the animation on clicking from the present position.</p>
+              <p style="text-align: center;">The "Restart" button will reset the display and start the animation all over again.</p>
             </div>
           </div>
 
@@ -318,10 +252,11 @@
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                   <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
                 </svg>
-                <i class="bx bx-tachometer"></i>
+                <i style="font-family: cursive;">3</i>
               </div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4>Step 3</h4>
+              <p style="text-align: center;"> The "Animation Speed" slider is used to control the animation speed.</p>
+              <p style="text-align: center;"> Its value ranges from 0.1x to 10x of the original speed and is set at 1x by default.</p>
             </div>
           </div>
 
@@ -331,10 +266,10 @@
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                   <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
                 </svg>
-                <i class="bx bx-layer"></i>
+                <i style="font-family: cursive;">4</i>
               </div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <h4>Step 4</h4>
+              <p style="text-align: center;">There is a drop down for initial conditionsto select from. From the top there are some pre-defined conditions, click on one of these to load and play it.</p>
             </div>
           </div>
 
@@ -344,10 +279,11 @@
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                   <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
                 </svg>
-                <i class="bx bx-slideshow"></i>
+                <i style="font-family: cursive;">5</i>
               </div>
-              <h4><a href="">Dele Cardo</a></h4>
-              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+              <h4><a href="">Step 5</a></h4>
+              <p style="text-align: center;">The last option in the Initial conditions drop down is "User Defined".</p>
+              <p style="text-align: center;">By Clicking on this, the user enter their own inputs in the pop-ups that will display.</p>
             </div>
           </div>
 
@@ -357,10 +293,10 @@
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
                   <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
                 </svg>
-                <i class="bx bx-arch"></i>
+                <i style="font-family: cursive;">6</i>
               </div>
-              <h4><a href="">Divera Don</a></h4>
-              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+              <h4><a href="">Step 6</a></h4>
+              <p style="text-align: center;">On the animation screen, user can rotate the plane by using the Right mouse click and Zoom in/out using the scroll wheel or the Left mouse click.</p>
             </div>
           </div>
 
@@ -446,15 +382,6 @@
     <div class="container">
       <h3>Thank You!</h3>
       <p>We hope you liked it. Please Visit Again.</p>
-      <!--
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-      -->
 
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
