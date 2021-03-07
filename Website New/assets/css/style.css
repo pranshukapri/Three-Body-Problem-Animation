@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
+  text-align:justify;
 }
 
 a {
@@ -26,6 +27,14 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
+
+#img1 {
+  border-radius: 10px;
+  border: 5px solid #000000;
+}
+
+ .image-margin   {width:100px; margin:0px 300px 0px 450px;}
+
 
 /*--------------------------------------------------------------
 # Back to top button
